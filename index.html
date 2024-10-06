@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zyrox's Personal Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #282c34;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        section:hover {
+            transform: scale(1.02);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #282c34;
+            border-bottom: 2px solid #61dafb;
+            padding-bottom: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #282c34;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        button {
+            background-color: #61dafb;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #21a1f1;
+        }
+        .skill {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #61dafb;
+            border-radius: 5px;
+            background-color: #e7f3ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Zyrox</h1>
+        <p>Welcome to my personal webpage!</p>
+    </header>
+    <section>
+        <h2>About Me</h2>
+        <p>Hello! I'm Zyrox, passionate about technology and design. I love creating innovative solutions and exploring new ideas in the digital world.</p>
+    </section>
+    <section>
+        <h2>Skills</h2>
+        <ul>
+            <li><button onclick="toggleSkill('webDev')">Web Development</button>
+                <div id="webDev" class="skill">HTML, CSS, JavaScript, React</div>
+            </li>
+            <li><button onclick="toggleSkill('graphicDesign')">Graphic Design</button>
+                <div id="graphicDesign" class="skill">Adobe Photoshop, Illustrator, Figma</div>
+            </li>
+            <li><button onclick="toggleSkill('problemSolving')">Problem Solving</button>
+                <div id="problemSolving" class="skill">Analytical thinking, logical reasoning</div>
+            </li>
+            <li><button onclick="toggleSkill('teamCollab')">Team Collaboration</button>
+                <div id="teamCollab" class="skill">Agile methodologies, communication skills</div>
+            </li>
+            <li><button onclick="toggleSkill('creativeThinking')">Creative Thinking</button>
+                <div id="creativeThinking" class="skill">Innovative solutions, brainstorming</div>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 Zyrox</p>
+    </footer>
+
+    <script>
+        function toggleSkill(skillId) {
+            const skillDiv = document.getElementById(skillId);
+            if (skillDiv.style.display === "none" || skillDiv.style.display === "") {
+                skillDiv.style.display = "block";
+            } else {
+                skillDiv.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
